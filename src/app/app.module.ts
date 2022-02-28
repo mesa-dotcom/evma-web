@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './_shared/components/footer/footer.component';
 import { TopBarComponent } from './_shared/components/top-bar/top-bar.component';
 import { TwoColumnsComponent } from './_shared/components/two-columns/two-columns.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 const primeng = [
   InputNumberModule,
@@ -57,7 +58,9 @@ const primeng = [
       ],
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: "mesa-dotcom.github.io" }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
