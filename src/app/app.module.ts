@@ -9,6 +9,7 @@ import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ButtonModule } from 'primeng/button';
+import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
 import { SplitterModule } from 'primeng/splitter';
 import { DropdownModule } from 'primeng/dropdown';
@@ -23,10 +24,12 @@ import { FooterComponent } from './_shared/components/footer/footer.component';
 import { TopBarComponent } from './_shared/components/top-bar/top-bar.component';
 import { TwoColumnsComponent } from './_shared/components/two-columns/two-columns.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { MainComponent } from './pages/main/main.component';
 
 const primeng = [
   InputNumberModule,
   ButtonModule,
+  MenuModule,
   MenubarModule,
   SplitterModule,
   DropdownModule,
@@ -41,7 +44,8 @@ const primeng = [
     AppComponent,
     FooterComponent,
     TopBarComponent,
-    TwoColumnsComponent
+    TwoColumnsComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +61,6 @@ const primeng = [
         { name: 'required', message: 'This field is required' },
       ],
     }),
-  ],
-  providers: [
-    { provide: APP_BASE_HREF, useValue: "mesa-dotcom.github.io" }
   ],
   bootstrap: [AppComponent]
 })

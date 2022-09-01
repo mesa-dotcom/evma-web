@@ -10,7 +10,7 @@ export class TopBarComponent implements OnInit {
 
   items: MenuItem[]
   constructor() {
-    this.items = this.items = [
+    this.items = [
       {
         label: 'Users',
         icon: 'pi pi-fw pi-user',

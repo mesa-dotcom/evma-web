@@ -1,5 +1,5 @@
-<p-menubar [styleClass]="'h-5rem shadow-2'" [model]="items">
-    <ng-template [pTemplate]="'start'">
-        <img src="../../../assets/icons/blocks.png" alt="blocks" class="w-1">
-    </ng-template>
-</p-menubar>
+<div class="h-5rem shadow-2 flex justify-content-between p-3">
+    <img src="../../../assets/icons/blocks.png" alt="blocks">
+    <button type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+</div>
