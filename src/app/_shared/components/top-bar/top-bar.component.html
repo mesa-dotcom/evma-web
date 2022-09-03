@@ -1,3 +1,11 @@
-<div class="h-5rem shadow-2 flex justify-content-between p-3">
+<!-- <div class="h-5rem shadow-2 flex justify-content-between p-3">
   <img src="../../../assets/icons/blocks.png" alt="blocks">
-</div>
+  <div>
+    <p>About</p>
+  </div>
+</div> -->
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <img src="../../../assets/icons/blocks.png" height="50" class="mr-2" (click)="toHomePage()">
+  </ng-template>
+</p-menubar>

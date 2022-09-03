@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,48 +10,36 @@ import { MenuItem } from 'primeng/api';
 export class TopBarComponent implements OnInit {
 
   items: MenuItem[]
-  constructor() {
+  constructor(private _router: Router) {
     this.items = [
       {
-        label: 'Users',
-        icon: 'pi pi-fw pi-user',
-        items: [
-          {
-            label: 'New',
-            icon: 'pi pi-fw pi-user-plus',
-
-          },
-          {
-            label: 'Delete',
-            icon: 'pi pi-fw pi-user-minus',
-
-          },
-          {
-            label: 'Search',
-            icon: 'pi pi-fw pi-users',
-            items: [
-              {
-                label: 'Filter',
-                icon: 'pi pi-fw pi-filter',
-                items: [
-                  {
-                    label: 'Print',
-                    icon: 'pi pi-fw pi-print'
-                  }
-                ]
-              },
-              {
-                icon: 'pi pi-fw pi-bars',
-                label: 'List'
-              }
-            ]
-          }
-        ]
+        label: 'About',
+        routerLink: 'about'
+      },
+      {
+        label: 'Gallery',
+        routerLink: 'gallery'
+      },
+      {
+        label: 'Events',
+        routerLink: 'evs'
+      },
+      {
+        label: 'Blog',
+        routerLink: 'blog'
+      },
+      {
+        label: 'Employment',
+        routerLink: 'employment'
       },
     ];
   }
 
   ngOnInit(): void {
+  }
+
+  toHomePage() {
+    this._router.navigate(['']);
   }
 
 }

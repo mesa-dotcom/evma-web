@@ -25,6 +25,11 @@ import { TopBarComponent } from './_shared/components/top-bar/top-bar.component'
 import { TwoColumnsComponent } from './_shared/components/two-columns/two-columns.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { MainComponent } from './pages/main/main.component';
+import { AboutComponent } from './pages/about/about.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { EmploymentComponent } from './pages/employment/employment.component';
+import { EvsComponent } from './pages/evs/evs.component';
 
 const primeng = [
   InputNumberModule,
@@ -45,7 +50,12 @@ const primeng = [
     FooterComponent,
     TopBarComponent,
     TwoColumnsComponent,
-    MainComponent
+    MainComponent,
+    AboutComponent,
+    GalleryComponent,
+    BlogComponent,
+    EmploymentComponent,
+    EvsComponent
   ],
   imports: [
     BrowserModule,
